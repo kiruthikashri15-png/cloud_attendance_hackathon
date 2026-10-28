@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <div>
+            <h2>📚 Cloud Attendance</h2>
+            <p>Attendance Management</p>
+        </div>
+        <button class="logout-btn" onclick="goBack()">Back</button>
+    </header>
+
+    <main class="dashboard">
+
+        <h1>Mark Attendance</h1>
+        <p class="dashboard-subtitle">
+            Select the date and mark each student's attendance.
+        </p>
+
+        <section class="recent-section">
+
+            <label for="attendanceDate">Attendance Date</label>
+            <input type="date" id="attendanceDate" required>
+
+            <div class="table-wrapper" style="margin-top: 25px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Attendance</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="attendanceTable"></tbody>
+                </table>
+            </div>
+
+            <button id="saveAttendance">Save Attendance</button>
+
+            <p id="attendanceMessage" role="status"></p>
+
+        </section>
+
+    </main>
+
+    <script src="attendance.js"></script>
+
+</body>
+</html>
